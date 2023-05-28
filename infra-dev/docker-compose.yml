@@ -10,7 +10,7 @@ services:
 
 
   backend:
-    image: elinakanz/foodgram_backend:latest
+    build: ../backend/
     restart: always
     volumes:
       - db_value:/var/lib/postgresql/data/
@@ -23,7 +23,9 @@ services:
 
 
   frontend:
-    image: elinakanz/foodgram_frontend:latest
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:
@@ -49,4 +51,3 @@ volumes:
   db_value:
   static_value:
   media_value:
-  result_build:
