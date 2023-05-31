@@ -45,7 +45,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: foodfram/
+          context: backend/
           push: true
           tags: elinakanz/foodgram_backend:latest
 
