@@ -11,12 +11,12 @@ from rest_framework.response import Response
 from users.models import User
 
 from .filters import RecipeFilter
+from .pagination import CustomPagination
 from .serializers import (FavoriteSerializer, IngredientSerializer,
                           RecipeCreateSerializer, RegisterUserSerializer,
                           ShoppingCartSerializer, SubscribeSerializer,
                           SubscribtionsSerializer, TagSerializer,
                           UserSerializer)
-from .pagination import CustomPagination
 
 
 class CreateListRetrieveSet(mixins.CreateModelMixin, mixins.ListModelMixin,
