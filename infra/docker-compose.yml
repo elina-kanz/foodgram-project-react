@@ -6,10 +6,8 @@ services:
     volumes:
       - db_value:/var/lib/postgresql/data/
     env_file:
-      - .env
-    user: postgres
-    environment:
-      - "POSTGRES_PASSWORD=postgres"
+      - ./.env
+
 
   backend:
     image: elinakanz/foodgram_backend:latest
@@ -21,7 +19,7 @@ services:
     depends_on:
       - db
     env_file:
-      - .env
+      - ./.env
 
 
   frontend:
