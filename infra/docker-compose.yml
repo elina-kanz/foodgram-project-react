@@ -6,7 +6,7 @@ services:
     volumes:
       - db_value:/var/lib/postgresql/data/
     env_file:
-      - ./.env
+      - .env
 
 
   backend:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     env_file:
-      - ./.env
+      - .env
 
 
   frontend:
