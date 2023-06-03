@@ -7,7 +7,9 @@ services:
       - db_value:/var/lib/postgresql/data/
     env_file:
       - .env
-
+    user: postgres
+    environment:
+      - "POSTGRES_PASSWORD=postgres"
 
   backend:
     image: elinakanz/foodgram_backend:latest
