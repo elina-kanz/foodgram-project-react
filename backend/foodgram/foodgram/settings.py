@@ -94,13 +94,13 @@ DATABASES = {
             default='django.db.backends.postgresql'),
         'NAME': os.getenv(
             'DB_NAME',
-            default='django.db.backends.postgresql'),
+            default='postgres'),
         'USER': os.getenv(
             'POSTGRES_USER',
-            default='django.db.backends.postgresql'),
+            default='postgres'),
         'PASSWORD': os.getenv(
             'POSTGRES_PASSWORD',
-            default='django.db.backends.postgresql'),
+            default='postgres'),
         'HOST': os.getenv(
             'DB_HOST',
             default='django.db.backends.postgresql'),
