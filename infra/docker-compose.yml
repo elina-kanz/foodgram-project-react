@@ -22,7 +22,7 @@ services:
 
 
   frontend:
-    image: elinakanz/foodgram_frontend:v1
+    image: elinakanz/foodgram_frontend
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:
