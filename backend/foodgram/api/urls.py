@@ -12,7 +12,6 @@ router.register('tags', TagViewSet)
 router.register('ingredients', IngredientViewSet)
 router.register('users', UserViewSet)
 
-
 urlpatterns = [
     path('', include('djoser.urls')),
     path('', include(router.urls)),
