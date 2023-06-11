@@ -13,10 +13,10 @@ from users.models import User
 from .filters import RecipeFilter
 from .pagination import CustomPagination
 from .serializers import (FavoriteSerializer, IngredientSerializer,
-                          RecipeCreateSerializer, RegisterUserSerializer,
-                          ShoppingCartSerializer, SubscribeSerializer,
-                          SubscribtionsSerializer, TagSerializer,
-                          UserSerializer, RecipeReadSerializer)
+                          RecipeCreateSerializer, RecipeReadSerializer,
+                          RegisterUserSerializer, ShoppingCartSerializer,
+                          SubscribeSerializer, SubscribtionsSerializer,
+                          TagSerializer, UserSerializer)
 
 
 class CreateListRetrieveSet(mixins.CreateModelMixin, mixins.ListModelMixin,
