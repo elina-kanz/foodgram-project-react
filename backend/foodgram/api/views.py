@@ -16,7 +16,7 @@ from .serializers import (FavoriteSerializer, IngredientSerializer,
                           RecipeCreateSerializer, RegisterUserSerializer,
                           ShoppingCartSerializer, SubscribeSerializer,
                           SubscribtionsSerializer, TagSerializer,
-                          UserSerializer)
+                          UserSerializer, RecipeReadSerializer)
 
 
 class CreateListRetrieveSet(mixins.CreateModelMixin, mixins.ListModelMixin,
@@ -44,6 +44,11 @@ class RecipeViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, ]
     filterset_class = RecipeFilter
     pagination_class = CustomPagination
+
+    def get_serializer_class(self):
+        if self.action == 'get':
+            return RecipeReadSerializer
+        return RecipeCreateSerializer
 
     @action(detail=True, methods=('post',),
             permission_classes=[permissions.IsAuthenticated])
