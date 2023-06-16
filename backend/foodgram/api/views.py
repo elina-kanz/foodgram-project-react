@@ -10,7 +10,7 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from users.models import User
 
-from .filters import RecipeFilter
+from .filters import RecipeFilter, IngredientFilter
 from .pagination import CustomPagination
 from .serializers import (FavoriteSerializer, IngredientSerializer,
                           RecipeCreateSerializer, RecipeReadSerializer,
@@ -37,6 +37,7 @@ class IngredientViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = (IsAdminOrReadOnly, )
     search_fields = ('^name', )
     pagination_class = None
+    filter_backends = (IngredientFilter, )
 
 
 class RecipeViewSet(viewsets.ModelViewSet):
