@@ -10,7 +10,7 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from users.models import User
 
-from .filters import RecipeFilter, IngredientFilter
+from .filters import IngredientFilter, RecipeFilter
 from .pagination import CustomPagination
 from .serializers import (FavoriteSerializer, IngredientSerializer,
                           RecipeCreateSerializer, RecipeReadSerializer,
